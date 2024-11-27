@@ -35,7 +35,7 @@ contract Voting {
     ) external {
         require(duration > 0, "Duration must be greater than 0");
         require(startTime > block.timestamp, "Start time must be in the future");
-        require(options.length >= 2, "At least two options required");
+        require(options.length >= 2, "At least two options are required");
 
         Ballot storage ballot = ballots[ballotCount];
         ballot.question = question;
